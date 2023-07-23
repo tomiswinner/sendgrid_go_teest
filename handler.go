@@ -16,7 +16,7 @@ var TO_EMAIL = os.Getenv("TO_EMAIL")
 func main() {
 	log.Print("function started")
 	r := gin.Default()
-	r.GET("/api/HttpTrigger1", func(c *gin.Context) {
+	r.GET("/api/Sendgrid", func(c *gin.Context) {
 		log.Print("HTTP Trigger Started")
 		from := mail.NewEmail("Example User", FROM_EMAIL)
 		subject := "Sending with SendGrid is Fun"
